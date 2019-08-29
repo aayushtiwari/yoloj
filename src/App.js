@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/materialize.min.css';
+import './css/owl.carousel.min.css';
+import './css/owl.theme.default.min.css';
+import './css/owlcarousel.css';
+import './css/style.css';
+import Header from './components/Header';
+import Cards from './components/Cards';
+import Footer from './components/Footer';
+import PopularSearches from './components/PopularSearches';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header></Header>
+     <Cards></Cards>
+     <PopularSearches></PopularSearches>
+     <PopularSearches></PopularSearches>
+     <Footer></Footer>
     </div>
   );
 }
