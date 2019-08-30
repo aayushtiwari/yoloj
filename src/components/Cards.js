@@ -11,7 +11,6 @@ export default class Cards extends Component {
               <div className="col s12">
                 <div className="slideshow-container">
                   <div>
-                    <div className="numbertext">1 / 3</div>
                     <div className="slide-right-box"> <img src="./image/pexels-photo-459225.jpeg"/>
                       <div className="slide-right-box-inner"> <span className="left-side"> <i className="material-icons dp48">content_cut</i>
                         <h4>culinary</h4>
@@ -46,7 +45,7 @@ export default class Cards extends Component {
                       <p>the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
                     </div>
                   </div>
-                  <a className="prev" onclick="plusSlides(-1)">&#10094;</a> <a className="next" onclick="plusSlides(1)">&#10095;</a> </div>
+                 </div>
               </div>
             </div>
             <div className="col l6 m12 slide-right-box">
@@ -71,7 +70,7 @@ export default class Cards extends Component {
                   </a> </li>
                 <li className="tab col s12"> <a href="#test33">
                   <div className="slide-right-box-main">
-                    <div className="slide-right-box-content"> <img src="./image/slide-small-img.jpg" alt="slide-img"/>></div>
+                    <div className="slide-right-box-content"> <img src="./image/slide-small-img.jpg" alt="slide-img"/></div>
                     <div className="box-content-text">
                       <h3>29/02/2018</h3>
                       <p>when an unknown printer took a galley </p>
