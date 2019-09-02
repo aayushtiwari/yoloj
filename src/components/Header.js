@@ -43,7 +43,6 @@ export default class Header extends Component {
             <div className="navbar-fixed header-nav">
               <nav>
                 <div className="nav-wrapper nav-cantact">
-                  {" "}
                   <a
                     href="#"
                     data-activates="mobile-demo"
@@ -78,9 +77,9 @@ export default class Header extends Component {
             <div className="container">
               <div className="header-icon">
                 {" "}
-                <a className="login" href="#">
+                <a className="login" href="#" onClick={this.switchLogin}>
                   <i className="fa fa-user"></i>
-                </a>{" "}
+                </a>
               </div>
               <div className="header-top">
                 {" "}
