@@ -12,11 +12,28 @@ import PopularSearches from './components/PopularSearches';
 function App() {
   return (
     <div className="App">
-     <Header></Header>
-     <Cards></Cards>
-     <PopularSearches></PopularSearches>
-     <PopularSearches></PopularSearches>
-     <Footer></Footer>
+      <Header></Header>
+      <Cards></Cards>
+      <PopularSearches></PopularSearches>
+      <PopularSearches></PopularSearches>
+      <ul class="fixed-link">
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <Footer></Footer>
     </div>
   );
 }
