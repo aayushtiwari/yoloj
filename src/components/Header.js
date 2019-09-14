@@ -6,13 +6,21 @@ export default class Header extends Component {
     this.state={
       login:false,
       search:false,
+      searchQuery:'',
+      searchResult:false
     }
+  }
+  searchResultToggle=()=>{
+    this.setState({searchResult:!this.state.searchResult});
   }
   switchLogin=()=>{
     this.setState({login:!this.state.login});
   }
   switchSearch=()=>{
     this.setState({search:!this.state.search});
+  }
+  searchQuery=(e)=>{
+      this.setState({searchQuery:e.target.value});
   }
 
   render() {
@@ -58,16 +66,16 @@ export default class Header extends Component {
                   <ul className="side-nav" id="mobile-demo">
                     <ul>
                       <li className="nav-dropdown">
-                        {" "}
+
                         <a className="bold-nav" href="#">
                           Advertise with us
-                        </a>{" "}
+                        </a>
                       </li>
                       <li className="nav-dropdown">
-                        {" "}
+
                         <a className="bold-nav" href="#">
                           Register your buisness
-                        </a>{" "}
+                        </a>
                       </li>
                     </ul>
                   </ul>
@@ -76,13 +84,13 @@ export default class Header extends Component {
             </div>
             <div className="container">
               <div className="header-icon">
-                {" "}
+
                 <a className="login" href="#" onClick={this.switchLogin}>
                   <i className="fa fa-user"></i>
                 </a>
               </div>
               <div className="header-top">
-                {" "}
+
                 <a className="logo" href="#">
                   <img src="./image/logo.png" alt="logo" />
                 </a>
@@ -92,13 +100,44 @@ export default class Header extends Component {
                       type="search"
                       className="search search-all"
                       placeholder="Search"
+                      value={this.state.searchQuery}
+                      onChange={this.searchQuery}
                     />
+                    {
+                      this.state.searchResult ? (<div className="search-query">
+                        <ul>
+                          <li>
+                            <i class="material-icons dp48">content_cut</i>
+                            <p>text</p>
+                            <span>+</span>
+                          </li>
+                          <li>
+                            <i class="material-icons dp48">content_cut</i>
+                            <p>text</p>
+                            <span>+</span>
+                          </li>
+                          <li>
+                            <i class="material-icons dp48">content_cut</i>
+                            <p>text</p>
+                            <span>+</span>
+                          </li>
+                          <li>
+                            <i class="material-icons dp48">content_cut</i>
+                            <p>text</p>
+                            <span>+</span>
+                          </li>
+                        </ul>
+                      </div>):null
+                    }
+
                     <select className="search-all">
                       <option>All categories</option>
                       <option>All categories</option>
                       <option>All categories</option>
                     </select>
-                    <button type="button" className="search-button search-all">
+                    <button type="button" className="search-button search-all"
+                    onClick={this.searchResultToggle}
+                    >
                       <i className="fa fa-search"></i>
                     </button>
                   </form>
@@ -170,8 +209,8 @@ export default class Header extends Component {
                       <div className="col-9">
                         <ul>
                           <li className="nav-dropdown">
-                            {" "}
-                            <i className="fa fa-chevron-down down-btn"></i>{" "}
+
+                            <i className="fa fa-chevron-down down-btn"></i>
                             <a className="bold-nav" href="#">
                               Advertise with us
                             </a>
@@ -185,8 +224,8 @@ export default class Header extends Component {
                             </ul>
                           </li>
                           <li className="nav-dropdown">
-                            {" "}
-                            <i className="fa fa-chevron-down down-btn"></i>{" "}
+
+                            <i className="fa fa-chevron-down down-btn"></i>
                             <a className="bold-nav" href="#">
                               Register your buisness
                             </a>
@@ -213,11 +252,10 @@ export default class Header extends Component {
             </div>
             <div className="col-3 sm-contact">
               <div className="container">
-                {" "}
                 <span>
                   <i className="fa fa-map-marker-alt"></i>
-                </span>{" "}
-                Hyderabad <a href="#"> Change </a>{" "}
+                </span>
+                Hyderabad <a href="#"> Change </a>
               </div>
             </div>
           </div>
