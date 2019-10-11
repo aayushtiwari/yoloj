@@ -8,11 +8,20 @@ import Header from './components/Header';
 import Cards from './components/Cards';
 import Footer from './components/Footer';
 import PopularSearches from './components/PopularSearches';
+import SearchOptions from './components/SearchOptions';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <Header></Header>
+      <Route path='/' exact>
       <Cards></Cards>
       <PopularSearches></PopularSearches>
       <PopularSearches></PopularSearches>
@@ -33,8 +42,13 @@ function App() {
           </a>
         </li>
       </ul>
+        </Route>
+        <Route path="/search">
+         <SearchOptions></SearchOptions>
+        </Route>
       <Footer></Footer>
     </div>
+    </Router>
   );
 }
 

@@ -11,7 +11,7 @@ export default class Header extends Component {
     }
   }
   searchResultToggle=()=>{
-    this.setState({searchResult:!this.state.searchResult});
+    // this.setState({searchResult:!this.state.searchResult});
   }
   switchLogin=()=>{
     this.setState({login:!this.state.login});
